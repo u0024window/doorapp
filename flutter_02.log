@@ -1,0 +1,76 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color attach --machine --device-id=2077ad4f1c8f3462f4e69201e85bdbdc9b5ce4db lib/main.dart
+
+## exception
+
+NoSuchMethodError: NoSuchMethodError: The getter 'port' was called on null.
+Receiver: null
+Tried calling: port
+
+```
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:50:5)
+#1      AttachCommand.runCommand (package:flutter_tools/src/commands/attach.dart:219:78)
+<asynchronous suspension>
+#2      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#3      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#4      _rootRunUnary (dart:async/zone.dart:1132:38)
+#5      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#6      _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#7      Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#8      Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#9      Future._complete (dart:async/future_impl.dart:473:7)
+#10     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#11     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#12     _rootRun (dart:async/zone.dart:1124:13)
+#13     _CustomZone.run (dart:async/zone.dart:1021:19)
+#14     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#15     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#16     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#17     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#18     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, v1.5.4-hotfix.2, on Mac OS X 10.14.4 18E226, locale zh-Hans-CN)
+    • Flutter version 1.5.4-hotfix.2 at /Users/wjtgl/sdk/flutter
+    • Framework revision 7a4c33425d (3 months ago), 2019-04-29 11:05:24 -0700
+    • Engine revision 52c7a1e849
+    • Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.0)
+    • Android SDK at /Users/wjtgl/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-29, build-tools 29.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+    • All Android licenses accepted.
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 10.2.1)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 10.2.1, Build version 10E1001
+    • ios-deploy 1.9.4
+    • CocoaPods version 1.7.1
+
+[✓] Android Studio (version 3.4)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin version 37.0.1
+    • Dart plugin version 183.6270
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b01)
+
+[!] IntelliJ IDEA Ultimate Edition (version 2019.1.2)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • For information about installing plugins, see
+      https://flutter.dev/intellij-setup/#installing-the-plugins
+
+[✓] Connected device (1 available)
+    • iPhone (2) • 2077ad4f1c8f3462f4e69201e85bdbdc9b5ce4db • ios • iOS 12.0.1
+
+! Doctor found issues in 1 category.
+```

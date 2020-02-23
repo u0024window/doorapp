@@ -1,0 +1,4 @@
+# Referenced at /Users/wjtgl/AndroidStudioProjects/dasherhelp/build/app/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:21
+-keep class hitdasher.dasherhelp.MainActivity { <init>(...); }
+# Referenced at /Users/wjtgl/AndroidStudioProjects/dasherhelp/build/app/intermediates/merged_manifests/release/processReleaseManifest/merged/AndroidManifest.xml:17
+-keep class io.flutter.app.FlutterApplication { <init>(...); }

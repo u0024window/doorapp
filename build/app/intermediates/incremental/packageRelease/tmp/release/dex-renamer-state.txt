@@ -1,0 +1,4 @@
+#Fri Jul 12 10:43:39 PDT 2019
+base.0=/Users/wjtgl/AndroidStudioProjects/dasherhelp/build/app/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
